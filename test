@@ -1,0 +1,581 @@
+
+
+
+WEBVTT
+
+00:01.280 --> 00:01.810
+In this app.
+
+00:01.820 --> 00:04.550
+Let's create an easy to instance and play with it.
+
+00:05.590 --> 00:12.880
+The service we would need to use to create an easy instance is easy, too easy to virtual servers in
+
+00:12.880 --> 00:16.030
+the cloud, easy to stand for elastic compute cloud.
+
+00:16.480 --> 00:21.760
+And when I click Easy to service, you'd be able to see that there are no instances that are running
+
+00:21.760 --> 00:22.810
+at this point in time.
+
+00:22.810 --> 00:24.580
+So instances running is zero.
+
+00:25.150 --> 00:27.910
+Right now I'm making use of the Mumbai region.
+
+00:27.910 --> 00:31.270
+I'm in Hyderabad, which is very, very near to Mumbai.
+
+00:31.300 --> 00:33.030
+Therefore, I'm choosing the region.
+
+00:33.040 --> 00:34.780
+Mumbai Episode one.
+
+00:34.990 --> 00:38.860
+You can choose any of the regions which is present in here, which is nearer to you.
+
+00:39.370 --> 00:44.110
+However, make sure that once you choose the region, you choose the same region for all the demos.
+
+00:44.560 --> 00:46.930
+So let's go ahead and pick up Mumbai from here.
+
+00:47.110 --> 00:50.020
+Now, we would want to create an easy to instance.
+
+
+00:50.260 --> 00:54.670
+One of the ways you can launch Easy two instances is by clicking launch instance in here.
+
+00:54.910 --> 00:59.830
+Another approach is you can go into instances and you can click a launch instance in here.
+
+01:00.250 --> 01:05.620
+Once you click Launch Instant, you'll get a screen where you would need to fill in a lot of details
+
+01:05.620 --> 01:08.410
+regarding the instance that we would want to create.
+
+01:09.670 --> 01:12.070
+The first thing you need to enter in here is the name.
+
+01:12.100 --> 01:13.480
+I'll call this first.
+
+01:13.600 --> 01:15.910
+ESI to instance.
+
+01:18.450 --> 01:21.540
+I've zoomed in a little bit so that the screen is really clear to you.
+
+01:21.570 --> 01:28.110
+The next thing that we would need to choose is something called an AM I, and AMA is a template that
+
+01:28.110 --> 01:29.730
+contains the software configuration.
+
+01:29.730 --> 01:34.470
+Basically what operating system you would want to use and what are the applications you would want to
+
+01:34.470 --> 01:36.570
+install on your instance?
+
+01:37.170 --> 01:40.710
+There are a wide variety of images which are provided by eight of us.
+
+01:41.940 --> 01:47.520
+What we'll do is we'll pick up a maze on Linux, which is the default energy suggested, and I'll choose
+
+01:47.520 --> 01:51.540
+Amazon next to Amy, which is the default one which is suggested in here.
+
+01:51.600 --> 01:54.300
+You can also see that this is free to our eligible.
+
+01:55.290 --> 01:58.710
+So let's choose the default army, which is suggested in there.
+
+01:59.070 --> 02:02.040
+The next thing you need to choose is the instance type.
+
+02:02.880 --> 02:08.700
+The AMA is all about software and instance type is all about hardware.
+
+02:09.030 --> 02:12.260
+What kind of hardware do you want on your easy to instance?
+
+02:12.270 --> 02:15.270
+That's what we are choosing when we are choosing an instance type.
+
+02:15.870 --> 02:20.340
+If you click this dropdown in here, you'd see that there are a wide variety of instance types that
+
+02:20.340 --> 02:21.600
+are present in blue.
+
+02:21.630 --> 02:27.360
+As you can see that each of these instance types has different amount of memory, different number of
+
+02:27.550 --> 02:30.240
+CPUs, and they have different pricing.
+
+02:30.540 --> 02:35.010
+What I would do for now is to choose the default one, which is suggested, which is to micro.
+
+02:35.040 --> 02:39.360
+This comes with one virtual CPU and it comes with one gig of memory.
+
+02:39.870 --> 02:42.840
+And as you can see in here, it is free to eligible as well.
+
+02:44.830 --> 02:47.350
+The next thing that we would need to choose is the key payer.
+
+02:47.740 --> 02:54.040
+You'd want to securely connect to your EC2 instance and the way you can securely connect to these instances
+
+02:54.040 --> 02:55.630
+by making use of a key payer.
+
+02:56.320 --> 02:59.500
+What we're doing here is we'll go out and create a new key pair.
+
+02:59.680 --> 03:09.640
+So I'll create a new key pair and I'll call this ec2 hyphen default and let's say create key payer.
+
+03:13.370 --> 03:17.030
+Once you create a pair, it will also be downloaded onto your local machine.
+
+03:17.390 --> 03:21.920
+Make sure that you store the key pair securely because anybody who has the keeper will be able to connect
+
+03:21.920 --> 03:23.510
+to your easy to instance.
+
+03:23.870 --> 03:26.240
+I'll say I love and I'll download the key pair.
+
+03:27.690 --> 03:31.530
+And over here you can see that easy to default keypad is chosen by default.
+
+03:31.830 --> 03:33.030
+So that looks good.
+
+03:33.810 --> 03:36.930
+The next thing we would need to configure is the network settings.
+
+03:37.470 --> 03:41.340
+As part of these network settings, one of the most important things that we would need to configure
+
+03:41.370 --> 03:42.990
+is a security group.
+
+03:43.350 --> 03:45.750
+A security group is a firewall.
+
+03:45.930 --> 03:51.240
+Basically, you can control what traffic is allowed into your instance and what traffic can be going
+
+03:51.240 --> 03:53.490
+out from your easy to instance.
+
+03:54.480 --> 03:59.940
+What we are doing here is to create a new security group and what I would want to do is to allow SSH
+
+03:59.940 --> 04:01.620
+traffic from anywhere.
+
+04:01.740 --> 04:06.060
+Whenever I would want to connect to the EC2 instance, I would need to ssh into it.
+
+04:06.060 --> 04:09.810
+So I would want to have only SSH into my AC two instance.
+
+04:09.810 --> 04:13.230
+That's the only thing I'm allowing as part of my security group.
+
+04:15.500 --> 04:20.930
+The last thing we would want to configure is this storage that needs to be attached to my easy to instance.
+
+04:21.800 --> 04:24.050
+I'll take the defaults for the storage as well.
+
+04:24.530 --> 04:30.020
+We are attaching a AGB general purpose route volume with our AC two instance.
+
+04:30.320 --> 04:34.130
+Let's quickly review some of the important details that we have configured until now.
+
+04:34.950 --> 04:36.900
+We want to create one easy to instance.
+
+04:37.650 --> 04:40.810
+We are making use of the Amazon Linux two kernel 5.10.
+
+04:40.830 --> 04:46.770
+Army and army is nothing but the operating system and the applications that you would want on your AC
+
+04:46.770 --> 04:47.720
+two instance.
+
+04:47.730 --> 04:54.120
+We chose the instance type as to micro instance type helps you in choosing what kind of hardware you'd
+
+04:54.120 --> 04:59.340
+want for your easy to instance, how many VCP used, how much memory you would want, what kind of IO
+
+04:59.400 --> 05:00.360
+speed you would want.
+
+05:00.390 --> 05:03.150
+You can choose all that by choosing the instance type.
+
+05:03.780 --> 05:06.330
+The next thing we configured is a security group.
+
+05:06.330 --> 05:07.860
+Security group is a firewall.
+
+05:08.100 --> 05:14.040
+This controls what traffic is allowed into your city instance and what traffic can go outside your easy
+
+05:14.040 --> 05:15.000
+to instance.
+
+05:15.330 --> 05:18.570
+We also attached a route, volume of size, a GBE.
+
+05:19.110 --> 05:20.970
+Let's go ahead and launch this instance.
+
+05:23.850 --> 05:28.590
+You can see that it says successfully initiated the launch of this specific instance.
+
+05:28.800 --> 05:32.010
+What I can do is I can click that specific instance in here.
+
+05:32.010 --> 05:33.180
+So when I click that.
+
+05:34.920 --> 05:39.060
+A new page would open up where I'll be able to see that specific instance.
+
+05:39.150 --> 05:43.170
+Right now you can see that the instance date of that is pending.
+
+05:44.220 --> 05:48.990
+If you give it a few minutes, you would see that the instant state would shift to running.
+
+05:49.590 --> 05:54.690
+Now, what I would want to do is I would want to be able to connect to this easy to instance, and I
+
+05:54.690 --> 05:57.630
+would want to be able to execute a few commands against it.
+
+05:57.660 --> 05:58.800
+How can I do that?
+
+05:59.280 --> 06:02.970
+That's where you can select this and you can click Connect.
+
+06:03.730 --> 06:05.800
+There are multiple approaches to connecting to your AC.
+
+06:05.800 --> 06:09.700
+To instance, what we'll do is we'll make use of easy, to instance, connect.
+
+06:12.350 --> 06:18.380
+The default username is easy to hyphen user so you can take the default username and you can say connect.
+
+06:19.670 --> 06:25.610
+And within a little while you should see that a new tab opens up where you can go ahead and type in
+
+06:25.610 --> 06:26.630
+a few commands.
+
+06:28.020 --> 06:29.420
+I'll go in here and type in.
+
+06:29.430 --> 06:30.840
+Who am I?
+
+06:32.130 --> 06:33.990
+Easy to hyphen user.
+
+06:34.140 --> 06:39.120
+I can go in and type in Python hyphen hyphen version.
+
+06:39.510 --> 06:46.230
+You can see that Python 2.7. 18 is already installed on this specific easy to instance, if you want,
+
+06:46.230 --> 06:48.720
+you can go ahead and install any software that you would want on this.
+
+06:48.720 --> 06:49.350
+Easy to install.
+
+06:49.380 --> 06:54.600
+For example, if you'd want to install Java or Node.js or if you want or if you don't install go, you
+
+06:54.600 --> 06:57.510
+can go ahead and install it on this specific easy to instance.
+
+06:58.260 --> 07:02.310
+One of the most important things that you need to understand is the power of what you are doing right
+
+07:02.310 --> 07:02.850
+now.
+
+07:05.130 --> 07:06.870
+With a click of a few buttons.
+
+07:06.870 --> 07:13.560
+We were able to launch a virtual server and we were able to very, very easily connect to it.
+
+07:13.560 --> 07:19.020
+And we are now able to execute commands and if we want we can go ahead and install software in it and
+
+07:19.020 --> 07:19.800
+play with it.
+
+07:21.860 --> 07:23.420
+That's the power of cloud.
+
+07:23.750 --> 07:28.070
+You can get access to powerful infrastructure with a click of few buttons.
+
+07:30.590 --> 07:35.120
+Let's close this window down and let's go back to our S.E. to instance.
+
+07:35.240 --> 07:39.170
+So I'll go back to easy two instances and you can see that right here.
+
+07:39.170 --> 07:43.850
+We have one instance running and if I click the instance ID.
+
+07:44.890 --> 07:48.190
+I can see all the details about this easy two instance.
+
+07:48.430 --> 07:51.490
+You can see that this easy to entrance has an instance ID.
+
+07:51.700 --> 07:54.190
+The ID is what is used to uniquely identify this.
+
+07:54.190 --> 07:55.390
+Easy to instance.
+
+07:55.660 --> 07:59.820
+The easy to instance by default is also assigned a public IP address.
+
+07:59.830 --> 08:04.960
+If you install an application on the easy two instance, you can use this public IP address to access
+
+08:04.960 --> 08:06.460
+that specific application.
+
+08:07.060 --> 08:11.410
+The easy two instance is also assigned a private IP address as well.
+
+08:11.920 --> 08:17.590
+This IP address is only available inside the network in which the easy two instance is created.
+
+08:18.280 --> 08:21.340
+You can see that the current state of instance is running.
+
+08:22.350 --> 08:25.590
+You can also see that the instance type of this is the to micro.
+
+08:26.130 --> 08:30.180
+Now there are a number of operations that you can perform on your instance.
+
+08:30.210 --> 08:34.380
+If you go to Instant State, you can stop the instance.
+
+08:34.920 --> 08:40.350
+You can reboot the instance, basically restart the instance, or you can terminate the instance.
+
+08:40.440 --> 08:43.500
+Stopping the instance would only temporarily stop the instance.
+
+08:43.990 --> 08:48.990
+You can go ahead and start it at a later point in time, but if you terminate the instance, the instance
+
+08:48.990 --> 08:50.490
+will be completely deleted.
+
+08:50.490 --> 08:52.290
+You'll not be able to restart it again.
+
+08:53.770 --> 08:57.980
+If you scroll down in here, you'll be able to see a lot more details about the easy two instance.
+
+08:58.000 --> 09:00.400
+You can see that we are making use of RMS on Linux.
+
+09:00.400 --> 09:07.900
+You can see the amide or we can see the amide or the RMS on machine image ID that we are making use
+
+09:07.900 --> 09:08.290
+of.
+
+09:08.770 --> 09:11.830
+You can also see the key page details and a lot of other details regarding this.
+
+09:11.830 --> 09:18.250
+Easy to instance, if you go over to security, you'd be able to see the details of the security group
+
+09:18.250 --> 09:20.380
+that we have configured earlier.
+
+09:20.380 --> 09:24.070
+When creating ADC two instance, we said we would want to have SSH traffic.
+
+09:24.910 --> 09:27.190
+And that's why you can see that in the security group.
+
+09:27.190 --> 09:30.250
+It allows traffic on Port 22.
+
+09:31.660 --> 09:35.350
+If you go to networking, you can see the networking details of this AC two instance.
+
+09:35.350 --> 09:37.870
+You can see the public IP address, private IP address.
+
+09:38.440 --> 09:41.650
+You can also see the VPC and the subnet details in here.
+
+09:41.680 --> 09:46.420
+VPC and subnets allow you to create your own private network in the cloud.
+
+09:46.510 --> 09:49.660
+We'll talk about VPC and subnets a little later in the course.
+
+09:50.080 --> 09:55.570
+If you go to storage over here, you can see that there is a hard disk or a virtual drive which is attached
+
+09:55.570 --> 09:57.280
+with your AC to instance.
+
+09:57.490 --> 10:02.680
+When we created our two instance, we chose that we would want a GB hard disk to be attached.
+
+10:03.160 --> 10:07.030
+You can see the details of it in here in statistics.
+
+10:07.030 --> 10:10.400
+You can see this current status of your easy to instance.
+
+10:10.420 --> 10:13.840
+You can see that all the system statistics are passing.
+
+10:13.840 --> 10:17.290
+And also you can see that the instance statistics are also passing.
+
+10:18.540 --> 10:24.120
+If you go to monitoring, you can look at all the metrics related to our EC2 instance.
+
+10:24.120 --> 10:28.620
+You can see the CPU utilization, you can see the status of the status checks.
+
+10:28.620 --> 10:33.850
+You can see how much network traffic is coming in and how much network traffic is going out.
+
+10:33.870 --> 10:36.670
+You can see the details of discrete describes.
+
+10:36.690 --> 10:40.800
+So if you want to look at metrics related to your easy to instance, you can come to the monitoring
+
+10:40.800 --> 10:45.570
+tab enables the service which tracks your metrics is cloud watch.
+
+10:45.870 --> 10:50.970
+So what's happening is you easy to instance would send all the metrics to cloud watch and these are
+
+10:50.970 --> 10:56.940
+the metrics you are seeing in here and you can also attach tags with your easy to instance.
+
+10:56.940 --> 11:01.520
+You can see that there is a tag which is already created name easy to instance.
+
+11:01.530 --> 11:04.320
+What I would want is I would want to add more tags.
+
+11:04.320 --> 11:07.710
+So I'll go to manage tags and I would want to add a new tag.
+
+11:07.740 --> 11:15.090
+I'll call this environment, I'll add a tag called environment and let's say Dev and I'll also add a
+
+11:15.090 --> 11:17.820
+tag called Business Unit.
+
+11:17.820 --> 11:19.980
+And let's call this business unit a.
+
+11:21.540 --> 11:26.370
+Bikes are really, really useful in associating a specific resource in the cloud with, let's say,
+
+11:26.580 --> 11:28.590
+environment or a business unit.
+
+11:29.390 --> 11:34.190
+Whenever you are working for a large enterprise, you'd want to be able to identify which resource belongs
+
+11:34.190 --> 11:39.500
+to which business unit or which environment, so that you can associate costs with that specific environment
+
+11:39.500 --> 11:41.210
+or that specific business unit.
+
+11:41.630 --> 11:43.160
+So let's go ahead and save this.
+
+11:43.890 --> 11:46.680
+In this step, we were able to create our first easy instance.
+
+11:46.680 --> 11:48.750
+We were able to connect to it using instance connect.
+
+11:48.750 --> 11:53.280
+We were able to execute a few commands against it and we saw that there are a lot of things that you
+
+11:53.280 --> 11:55.350
+can do with your AC instance.
+
+11:56.010 --> 12:01.110
+Before we end this step, what I would want to do is to terminate this specific, easy to instance in
+
+12:01.110 --> 12:01.590
+the cloud.
+
+12:01.590 --> 12:04.800
+You don't want to leave the resources running for a long time.
+
+12:05.550 --> 12:10.240
+The best practice in the cloud is to always terminate the resources after you play with them.
+
+12:10.260 --> 12:12.030
+So what I'll do is I'll select this.
+
+12:12.800 --> 12:16.250
+I'd go to Instant State and I would say Terminate instance.
+
+12:17.180 --> 12:19.010
+I'd go ahead and say terminate.
+
+12:20.090 --> 12:22.930
+We have started the termination of this AC two instance.
+
+12:22.940 --> 12:25.550
+The termination of the AC through instance will take a little while.
+
+12:25.580 --> 12:27.830
+I recommend you to take a break and I'll see you on.
