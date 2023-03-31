@@ -3,6 +3,7 @@ title: "Introduction to JavaScript"
 datePublished: Fri Mar 31 2023 06:20:53 GMT+0000 (Coordinated Universal Time)
 cuid: clfw5os98000809mk5awpgbul
 slug: introduction-to-javascript
+cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/cckf4TsHAuw/upload/18e25f791bb47f9ca685328e69f52f07.jpeg
 tags: javascript, web-development
 
 ---
