@@ -14,19 +14,7 @@ In the dynamic world of API design, there's often a need to model complex relati
 
 Polymorphism, often referred to as the ability of an object to take on many forms, can be elegantly captured in Swagger YAML. Imagine a scenario where you're building an API that deals with various types of pets: dogs, cats, and more. Instead of rigidly defining each pet type, you can embrace polymorphism to capture their shared attributes while preserving their unique characteristics.
 
-Pet:
-  type: object
-  properties:
-    id:
-      type: integer
-    type:
-      type: string
-  discriminator:
-    propertyName: type
-  oneOf:
-    - $ref: '#/components/schemas/Dog'
-    - $ref: '#/components/schemas/Cat'
-
+`Pet: type: object properties: id: type: integer type: type: string discriminator: propertyName: type oneOf: - $ref: '#/components/schemas/Dog' - $ref: '#/components/schemas/Cat'`
 
 By employing the `oneOf` keyword, you're telling Swagger that the response could be any of the specified subtypes. The `discriminator` field further helps Swagger distinguish between these subtypes, using the `type` property.
 
@@ -34,21 +22,9 @@ By employing the `oneOf` keyword, you're telling Swagger that the response could
 
 Inheritance, a cornerstone of object-oriented design, allows you to create a hierarchy of related objects. Achieving inheritance in Swagger YAML involves extending properties from a parent schema into child schemas. For instance, let's extend the `Pet` schema into the `Dog` and `Cat` schemas.
 
-Dog:
-  type: object
-  allOf:
-    - $ref: '#/components/schemas/Pet'
-  properties:
-    breed:
-      type: string
+`Dog: type: object allOf: - $ref: '#/components/schemas/Pet' properties: breed: type: string`
 
-Cat:
-  type: object
-  allOf:
-    - $ref: '#/components/schemas/Pet'
-  properties:
-    color:
-      type: string
+`Cat: type: object allOf: - $ref: '#/components/schemas/Pet' properties: color: type: string`
 
 Using the `allOf` keyword, you're creating a child schema (`Dog` or `Cat`) that inherits all the properties of the parent schema (`Pet`). This approach helps maintain a consistent structure while accommodating specialized attributes.
 
